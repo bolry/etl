@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.5.0)
 project(etl_11sanity_tests)
 
 add_library(t11)
+target_compile_definitions(t11 PRIVATE __STDC_LIMIT_MACROS __STDC_CONSTANT_MACROS __STDC_FORMAT_MACROS)
 target_include_directories(t11 PRIVATE "")
 target_include_directories(t11 SYSTEM PRIVATE ../../include)
 set_target_properties(t11 PROPERTIES

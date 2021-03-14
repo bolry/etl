@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.5.0)
 project(etl_03sanity_tests)
 
 add_library(t03)
+target_compile_definitions(t03 PRIVATE __STDC_LIMIT_MACROS __STDC_CONSTANT_MACROS __STDC_FORMAT_MACROS)
 target_include_directories(t03 PRIVATE "")
 target_include_directories(t03 SYSTEM PRIVATE ../../include)
 set_target_properties(t03 PROPERTIES
